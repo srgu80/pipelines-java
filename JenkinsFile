@@ -1,0 +1,14 @@
+pipeline{
+  agent any
+  stages{
+    stage ('checkout code') {
+      steps{
+        git 'https://github.com/srgu80/pipelines-java'
+        }
+      }
+    stage ('Build') {
+      steps{
+        sh echo "Building the Code"
+        }
+      }
+}
